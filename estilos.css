@@ -1,1 +1,103 @@
+/* Paleta pastel, estilo moderno y fondo claro */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  color: #444;
+  background-image: radial-gradient(#fce4ec 1px, transparent 1px),
+                    radial-gradient(#e8f5e9 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff3e0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #4a148c;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  color: #6a1b9a;
+}
+
+#malla-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.semestre {
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+  background-color: #f3e5f5;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.semestre h3 {
+  text-align: center;
+  color: #7b1fa2;
+}
+
+.ramo {
+  background-color: #ffffff;
+  border: 2px solid #ce93d8;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ramo.aprobado {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+  text-decoration: line-through;
+  border-color: #81c784;
+}
+
+.ramo.bloqueado {
+  background-color: #ffccbc;
+  color: #d84315;
+  cursor: not-allowed;
+  border-color: #ff8a65;
+}
+
+#mensaje-error {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffebee;
+  color: #b71c1c;
+  padding: 1rem 2rem;
+  border: 1px solid #ef5350;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-weight: bold;
+  display: none;
+  z-index: 1000;
+}
+
+.oculto {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #malla-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
